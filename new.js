@@ -8,19 +8,30 @@ const input = document.querySelector("#input");
 
 // let amount = 0;
 let ans = 50;
-let ans2 = 
+let min;
+let max;
 buttom.addEventListener("click",function(){
 
     const num = input.value;
-    if(num<ans){
-        title1.innerText = num;
-    }else if(num>ans){
-        title3.innerText = num;
-    }else{
+    input.value = null;
+
+    // if(num<min ||num>max){
+    //     title.innerHTML = "XX";
+    //     title4.innerHTML = "XX";
+        
+    // }
+
+    if(num<ans&&num>min){
+        min = num;
+        title1.innerText = min;
+    }if(num>ans){
+        max = num
+        title3.innerText = max;
+    }if(num ===ans){
         title.innerHTML = "答對了!";
         title4.innerHTML = "恭喜"
     }
 
-    input.value = null;
-});
+}
+);
 
